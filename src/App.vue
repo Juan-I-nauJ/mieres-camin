@@ -1,13 +1,24 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from './components/TheHeader.vue';
 </script>
 
 <template>
-  <HelloWorld  />
+  <TheHeader />
+  <div class="page-view">
+  <router-view />
+  </div>
 </template>
 
-<style scoped>
-body{
-background-color: yellow;
+<style lang="scss">
+*{
+  font-family: $main-font;
 }
-</style>
+body{
+  background-color: $background;
+}
+
+.page-view{
+  margin-top: 4.5rem;
+}
+
+  </style>
