@@ -1,16 +1,35 @@
 <template>
-    <div>
-        <h1>Tab 3 is under construction</h1>
-        <p>Please check back later.</p>
-    </div>
+    <header>
+        <h1>Bebidas</h1>
+    </header>
+    <section>
+        <header>
+            <h1 @click="() => console.log(store.getBeer)">Cervezas</h1>
+        </header>
+        <BeerList />
+    </section>
 </template>
 
-<script setup>
-//...
+<script setup lang="ts">
+import BeerList from './../components/BeerList.vue';
 </script>
 
 <style scoped lang="scss">
-div{
-    background-color: #ffffff;
+header {
+    h1 {
+        color: $light-blue;
+        font-family: $title-font;
+    }
 }
+
+section {
+    background-color: #ffffff;
+    color: $light-blue;
+
+    header {
+        h1 {
+            font-family: $title-font;
+        }
+    }
+  }
 </style>
