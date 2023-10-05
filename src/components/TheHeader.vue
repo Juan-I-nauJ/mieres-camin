@@ -10,16 +10,13 @@
     </header>
 </template>
 
-<script setup>
-import { useRouter, useRoute } from 'vue-router'
-
-const router = useRouter();
-const route = useRoute();
+<script setup lang="ts">
+//...
 </script>
 
 <style scoped lang="scss">
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -57,10 +54,6 @@ header {
             li:not(:first-child) {
                 margin-left: 2rem;
             }
-
-            //    li:active{
-            //      border-bottom: 1px solid red;
-            // }
         }
     }
 }

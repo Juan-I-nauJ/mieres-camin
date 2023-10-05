@@ -4,7 +4,7 @@
     </header>
     <section>
         <header>
-            <h1 @click="() => console.log(store.getBeer)">Cervezas</h1>
+            <h1>Cervezas</h1>
         </header>
         <BeerList />
     </section>
