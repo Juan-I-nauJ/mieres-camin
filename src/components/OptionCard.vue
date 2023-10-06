@@ -10,9 +10,9 @@
             </div>
             <div class="card-body__card-input">
                 <!--  <slot name="card-input"></slot> -->
-                <label class="radio-label" :for='labelFor'>
+                <label class="radio-label" :for='labelFor' ref="labelRef">
                     <slot name="label-input"></slot>
-                    <input type="radio" :name="radioName" :id="labelFor">
+                    <input type="radio" :name="radioName" :id="labelFor" class="radio-label__radio">
                 </label>
             </div>
         </div>
@@ -20,9 +20,16 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+
 const props = defineProps({
     labelFor: String,
     radioName: String
+})
+
+const labelRef = ref(null);
+defineExpose({
+labelRef
 })
 </script>
 
@@ -36,8 +43,10 @@ const props = defineProps({
 
 .card-header {
     text-align: center;
-    color: $light-blue;
+    font: $option-card-title-font;
+    color: $mid-blue;
     padding-top: 1rem;
+    
 }
 
 hr {
@@ -50,6 +59,7 @@ hr {
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
+    font: $option-card-regular-font;
 
 }
 
@@ -60,12 +70,16 @@ hr {
     margin: 0.5rem 0.5rem 0.5rem 0.33rem;
     align-items: center;
     justify-content: center;
-    border: 1px solid $mid-blue;
+    border: 1px solid $black;
+    background-color: $background;
 
 
-    input {
+    .radio-label__radio {
         padding: 0;
 
     }
+}
+.selected{
+    border: 1px solid $light-blue;
 }
 </style>

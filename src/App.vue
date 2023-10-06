@@ -11,7 +11,7 @@ import TheHeader from './components/TheHeader.vue';
 
 <style lang="scss">
 *{
-  font-family: $main-font;
+  font: $main-font;
 }
 body{
   background-color: $background;

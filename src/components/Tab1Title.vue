@@ -9,9 +9,10 @@
 <style scoped lang="scss">
 .title{
     text-align: center;
-    font-family: $title-font;
+    font: $title-font;
     color: $dark-blue;
     display: inline-block;
+   
    
 }
 </style>

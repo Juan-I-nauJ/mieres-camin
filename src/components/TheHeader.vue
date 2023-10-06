@@ -22,6 +22,7 @@
     right: 0;
     border: 1px solid $background;
     border-top: none;
+    font: $tab-title-font;
     color: $light-blue;
     background-color: #ffffff;
     height: 3.18rem;
@@ -43,11 +44,13 @@
                 .nav__li--a {
                     text-decoration: none;
                     padding: 0 0 1rem 0;
+                    color: $light-blue;
 
                 }
 
                 .router-link-exact-active {
                     border-bottom: 1px solid $black;
+                    color: $mid-blue;
                 }
             }
 

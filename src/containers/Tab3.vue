@@ -18,7 +18,7 @@ import BeerList from './../components/BeerList.vue';
 .tab-header {
     .tab-header__title {
         color: $light-blue;
-        font-family: $title-font;
+        font: $blue-title-font;
         text-align: center;
         padding: 1rem;
         margin-left: 2rem;
@@ -31,10 +31,10 @@ import BeerList from './../components/BeerList.vue';
 
    
         .beer-list-container__title {
-            font-family: $title-font;
             text-align: center;
             padding: 1rem;
             margin-left: 2rem;
+            font: $blue-title-font;
         }
     
   }
@@ -53,6 +53,7 @@ import BeerList from './../components/BeerList.vue';
   .beer-list-container__title{
     text-align: left;
     margin: 0;
+    
   }
 
   }
