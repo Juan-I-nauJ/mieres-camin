@@ -1,10 +1,10 @@
 <template>
-    <header>
-        <nav>
-            <ul>
-                <li><router-link to='/'>Tab 1</router-link></li>
-                <li><router-link to='/tab2'>Tab 2</router-link></li>
-                <li><router-link to='/tab3'>Tab 3</router-link></li>
+    <header class="header">
+        <nav class="nav"> 
+            <ul class="nav__ul">
+                <li class="nav__li"><router-link class="nav__li--a" to='/'>Tab 1</router-link></li>
+                <li class="nav__li"><router-link class="nav__li--a" to='/tab2'>Tab 2</router-link></li>
+                <li class="nav__li"><router-link class="nav__li--a" to='/tab3'>Tab 3</router-link></li>
             </ul>
         </nav>
     </header>
@@ -15,7 +15,7 @@
 </script>
 
 <style scoped lang="scss">
-header {
+.header {
     position: absolute;
     top: 0;
     left: 0;
@@ -26,21 +26,21 @@ header {
     background-color: #ffffff;
     height: 3.18rem;
 
-    nav {
+    .nav {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
 
-        ul {
+        .nav__ul {
             padding: 0;
             display: flex;
             flex-direction: row;
             list-style: none;
             justify-content: center;
 
-            li {
-                a {
+            .nav__li {
+                .nav__li--a {
                     text-decoration: none;
                     padding: 0 0 1rem 0;
 
@@ -51,7 +51,7 @@ header {
                 }
             }
 
-            li:not(:first-child) {
+            .nav__li:not(:first-child) {
                 margin-left: 2rem;
             }
         }
@@ -59,26 +59,26 @@ header {
 }
 
 @media (min-width: 47rem) {
-    header {
+    .header {
         width: 90%;
         margin: 0 auto;
 
-        nav {
+        .nav {
             justify-content: flex-end;
 
-            ul {
+            .nav__ul {
                 margin-right: 2rem;
 
-                li {
+                .nav__li {
                     margin-left: 2rem;
 
-                    a {
+                    .nav__li--a {
                         padding: 0 2rem 1rem 2rem;
 
                     }
                 }
 
-                li:not(:first-child) {
+                .nav__li:not(:first-child) {
                     margin-left: 1rem;
                 }
             }

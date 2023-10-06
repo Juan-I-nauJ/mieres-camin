@@ -1,8 +1,10 @@
 <template>
-    <div>
-    <h1>Page not found</h1>
+    <section class="not-found">
+        <header class="not-found__header">
+    <h1 class="not-found__header__title">Page not found</h1>
+</header>
     <p>Please, go back to the main page and try again.</p>
-    </div>
+</section>
 </template>
 
 <script setup lang="ts">
@@ -10,8 +12,11 @@
 </script>
 
 <style scoped lang="scss">
-div{
+.not-found{
     background-color: #ffffff;
+}
+.not-found__header__title{
+    font-family: $title-font;
 }
 </style>
 
