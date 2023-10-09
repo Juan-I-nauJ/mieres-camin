@@ -9,8 +9,10 @@
             </Tab1Title>
         </header>
         <main class="card-list-container">
-            <div class="card-list-container__card-container" v-for="(regime) in textContent.hotelCardContent" :key="regime.id" @click="handleClick(+regime.id)">
-                <OptionCard :label-for="regime.header" radio-name="stay-options" :boxId="+regime.id" :boxClicked="boxClicked">
+            <div class="card-list-container__card-container" v-for="(regime) in textContent.hotelCardContent"
+                :key="regime.id">
+                <OptionCard :label-for="regime.header" radio-name="stay-options" :boxId="+regime.id"
+                    :boxClicked="boxClicked">
                     <template #card-header>
                         {{ regime.header }}
                     </template>
@@ -19,8 +21,10 @@
                             <li>{{ item }}</li>
                         </ul>
                     </template>
-                    <template #label-input >
+                    <template #label-input>
+                        <div @click="handleClick(+regime.id)" style="width:100%">
                         {{ regime.option }}
+                    </div>
                     </template>
                 </OptionCard>
             </div>
@@ -37,8 +41,9 @@ import { ref } from 'vue';
 
 const boxClicked = ref(0);
 
-const handleClick = (elementId:number):void => {
-boxClicked.value = elementId;
+const handleClick = (elementId: number): void => {
+    boxClicked.value = elementId;
+    console.log('boxClicked tiene de valor', boxClicked.value);
 };
 
 </script>
