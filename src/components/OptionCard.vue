@@ -1,5 +1,5 @@
 <template>
-    <article class="card">
+    <article class="card" :class="handleSelectedProp ? 'selected' : ''">
         <header class="card-header">
             <slot name="card-header"></slot>
         </header>
@@ -10,7 +10,7 @@
             </div>
             <div class="card-body__card-input">
                 <!--  <slot name="card-input"></slot> -->
-                <label class="radio-label" :for='labelFor' ref="labelRef">
+                <label class="radio-label" :for='labelFor' :class="handleSelectedProp ? 'selected' : ''">
                     <slot name="label-input"></slot>
                     <input type="radio" :name="radioName" :id="labelFor" class="radio-label__radio">
                 </label>
@@ -20,22 +20,23 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed } from 'vue';
 
 const props = defineProps({
-    labelFor: String,
-    radioName: String
+  labelFor: String,
+  radioName: String,
+  boxClicked: Number,
+  boxId: Number,
 })
 
-const labelRef = ref(null);
-defineExpose({
-labelRef
-})
+const handleSelectedProp = computed(():boolean=> props.boxClicked === props.boxId);
+
+
 </script>
 
 <style scoped lang="scss">
 .card {
-    min-height: 60vh;
+    min-height: 70vh;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -45,8 +46,7 @@ labelRef
     text-align: center;
     font: $option-card-title-font;
     color: $mid-blue;
-    padding-top: 1rem;
-    
+    padding-top: 1rem; 
 }
 
 hr {
@@ -67,6 +67,7 @@ hr {
     display: flex;
     flex-direction: row-reverse;
     width: 90%;
+    height: 100%;
     margin: 0.5rem 0.5rem 0.5rem 0.33rem;
     align-items: center;
     justify-content: center;

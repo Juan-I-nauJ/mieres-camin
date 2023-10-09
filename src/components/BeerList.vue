@@ -1,6 +1,6 @@
 <template>
     <ul class="beer-ul" v-if="!(store.getBeer.length <= 0)">
-        <li class="beer-li" v-for="beer in store.getBeer">
+        <li class="beer-li" v-for="(beer, i) in store.getBeer" :key="i">
 
             <div class="beer-li__image-control">
                 <img class="beer-li__image-control__image" :src="beer.image_url" />
@@ -62,6 +62,7 @@ onMounted((): void => {
             width: 10rem;
             height: 10rem;
             object-fit: scale-down;
+            margin-top: 1rem;
         }
     }
 
