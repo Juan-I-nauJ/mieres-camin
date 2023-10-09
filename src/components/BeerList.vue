@@ -1,17 +1,15 @@
 <template>
     <ul class="beer-ul" v-if="!(store.getBeer.length <= 0)">
         <li class="beer-li" v-for="(beer, i) in store.getBeer" :key="i">
-
             <div class="beer-li__image-control">
                 <img class="beer-li__image-control__image" :src="beer.image_url" />
             </div>
             <div class="beer-li__beer-data">
                 <p class="beer-li__beer-data--title">{{ beer.name }}</p>
-                <p>{{ beer.description }}</p>
+                <p class="beer-li__beer-data--p">{{ beer.description }}</p>
                 <p><span class="beer-li__dishes" v-for="dish in handleDishes(beer.food_pairing)">{{ `${dish} ` }}</span></p>
             </div>
             <span class="beer-li__graduation" :class="getGraduation(beer.abv)">{{ beer.abv }}</span>
-
         </li>
 
     </ul>
@@ -43,12 +41,17 @@ onMounted((): void => {
 </script>
 
 <style scoped lang="scss">
+.beer-ul {
+    padding: 0;
+}
+
 .beer-li {
     position: relative;
     display: flex;
     flex-direction: column;
-    border: 1px solid lightgrey;
+    border: 1px dotted $grey;
     width: 100%;
+
 
     .beer-li__image-control {
         display: flex;
@@ -70,8 +73,10 @@ onMounted((): void => {
         display: flex;
         flex-direction: column;
         color: $black;
+        padding-right: 2rem;
+        padding-left: 1rem;
 
-        .beer-li__beer-data--title{
+        .beer-li__beer-data--title {
             font: $subtitle-font;
             color: $dark-blue;
         }
@@ -79,7 +84,7 @@ onMounted((): void => {
         .beer-li__dishes {
             color: $light-blue;
             font: $beer-card-dishes-font;
-            
+
         }
 
     }
@@ -90,10 +95,7 @@ onMounted((): void => {
         right: 0;
         padding-right: 2rem;
     }
-
-
 }
-
 
 .beer-li__graduation--high-alcohol {
     background-color: $red;
@@ -114,4 +116,9 @@ onMounted((): void => {
     .beer-li {
         flex-direction: row;
     }
-}</style>
+
+    .beer-li__beer-data {
+        padding-left: 0rem;
+    }
+}
+</style>

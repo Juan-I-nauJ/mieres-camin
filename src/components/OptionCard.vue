@@ -9,7 +9,6 @@
                 <slot name="card-properties"></slot>
             </div>
             <div class="card-body__card-input">
-                <!--  <slot name="card-input"></slot> -->
                 <label class="radio-label" :for='labelFor' :class="handleSelectedProp ? 'selected' : ''">
                     <slot name="label-input"></slot>
                     <input type="radio" :name="radioName" :id="labelFor" class="radio-label__radio">
@@ -61,6 +60,11 @@ hr {
     flex-grow: 1;
     font: $option-card-regular-font;
 
+}
+
+.card-body__card-properties{
+    padding-right: 1rem;
+    padding-left: 0.5rem;
 }
 
 .radio-label {

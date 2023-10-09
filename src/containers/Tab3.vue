@@ -28,12 +28,16 @@ import BeerList from './../components/BeerList.vue';
 .beer-list-container {
     background-color: #ffffff;
     color: $light-blue;
+    border: 1px dotted $grey;
+    margin-top: 3rem;
+    padding: 0 1rem;
+
 
    
         .beer-list-container__title {
             text-align: center;
-            padding: 1rem;
-            margin-left: 2rem;
+           padding: 1rem 1rem 1rem 0;
+ 
             font: $blue-title-font;
         }
     

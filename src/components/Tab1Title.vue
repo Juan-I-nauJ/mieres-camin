@@ -1,13 +1,20 @@
 <template>
 <span class="title--span"><slot name="title-span"></slot></span>
-<h1 class="title"><slot></slot></h1>
-<span class="title--rating"><font-awesome-icon icon="fa-solid fa-star"
-                    size="xs" /><font-awesome-icon icon="fa-solid fa-star" size="xs" /><font-awesome-icon
-                    icon="fa-solid fa-star" size="xs" /><font-awesome-icon icon="fa-solid fa-star" size="xs" /></span>
+<h1 class="title" @click="tryArray"><slot></slot></h1>
+<span class="title--rating">
+    <font-awesome-icon icon="fa-solid fa-star" size="xs" v-for="star in starArray" :key="star" class="title--rating__star"/>
+</span>
 </template>
 
 <script setup lang="ts">
-//...
+import { computed } from 'vue';
+
+const props = defineProps({
+ starNumber:Number
+})
+
+const starArray = computed(():Number[]=>[...Array(props.starNumber).keys()]);
+const tryArray = ()=>console.log(starArray.value);
 </script>
 
 <style scoped lang="scss">
@@ -28,14 +35,22 @@
    
 }
 .title--rating {
-        color: $yellow;
+        color: $orange;
         text-wrap: nowrap;
 
+
+        .title--rating__star{
+        margin-left: 0.3rem;
     }
+    }
+
+
+
+
 
     @media (min-width: 32rem) {
     .title--rating {
-        margin-left: 3rem;
+        margin-left: 2rem;
 
     }
 }
