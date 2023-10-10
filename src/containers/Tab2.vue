@@ -19,6 +19,16 @@
                 <template #card-info>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates omnis eveniet soluta magnam quasi maxime hic iure provident facere sint consectetur odio dolorem nesciunt delectus, eius a quae sequi? Nesciunt.
                 </template>
+                <template #extra-info-options>
+                    <ul class="extra-info__info-list">
+                        <li>Blablabla</li>
+                        <li>blablablabla</li>
+                        <li>blablablabla</li>
+                        <li>blobloblo</li>
+                        <li>blu</li>
+                        <li>blaaaaaaa</li>
+                    </ul>
+                </template>
                 </HotelCard>
                 </div>
         </article>
@@ -50,8 +60,6 @@ div{
     height: 0;
 }
 
-
-
 .header-toggle-arrow__icon{
     transition: transform 0.3s;
 
@@ -61,5 +69,7 @@ div{
     transform: rotate(180deg);
 }
 
-
+.extra-info__info-list {
+    columns: 3;
+}
 </style>
