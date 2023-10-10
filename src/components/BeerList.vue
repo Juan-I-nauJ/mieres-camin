@@ -49,7 +49,8 @@ onMounted((): void => {
     position: relative;
     display: flex;
     flex-direction: column;
-    border: 1px dotted $grey;
+    margin: 2rem 0;
+    border: 1px solid $border-grey;
     width: 100%;
 
 
@@ -59,13 +60,12 @@ onMounted((): void => {
         justify-content: center;
         align-items: center;
         height: 20%;
-        padding: 0 1rem;
+        padding: 1rem 1rem;
 
         .beer-li__image-control__image {
             width: 10rem;
-            height: 10rem;
+            height: 12.7rem;
             object-fit: scale-down;
-            margin-top: 1rem;
         }
     }
 
@@ -91,9 +91,12 @@ onMounted((): void => {
 
     .beer-li__graduation {
         position: absolute;
-        top: 0;
+        top: 1.1rem;
         right: 0;
-        padding-right: 2rem;
+        padding: 0.3rem 3rem 0.3rem 0.5rem;
+        
+        font: $subtitle-font;
+   
     }
 }
 

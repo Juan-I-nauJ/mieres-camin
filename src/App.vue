@@ -12,12 +12,20 @@ import TheHeader from './components/TheHeader.vue';
 <style lang="scss">
 *{
   font: $main-font;
+  box-sizing: border-box;
+}
+
+html{
+  max-width: 80rem;
+  margin: 0 auto;
 }
 body{
   background-color: $background;
 }
 
 .page-view{
+
+  width: 100%;
   margin-top: 4.5rem;
 }
 

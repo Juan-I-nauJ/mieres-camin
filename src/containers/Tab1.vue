@@ -11,8 +11,7 @@
         <main class="card-list-container">
             <div class="card-list-container__card-container" v-for="(regime) in textContent.hotelCardContent"
                 :key="regime.id">
-                <OptionCard :label-for="regime.header" radio-name="stay-options" :boxId="+regime.id"
-                    :boxClicked="boxClicked">
+                <OptionCard :label-for="regime.header" radio-name="stay-options" :boxId="+regime.id">
                     <template #card-header>
                         {{ regime.header }}
                     </template>
@@ -22,7 +21,7 @@
                         </ul>
                     </template>
                     <template #label-input>
-                        <div @click="handleClick(+regime.id)" style="width:100%">
+                        <div @click="handleClick(+regime.id)" style="width:100%" class="label-clickable-div">
                         {{ regime.option }}
                     </div>
                     </template>
@@ -36,24 +35,25 @@
 import Tab1Title from '../components/Tab1Title.vue';
 import OptionCard from '../components/OptionCard.vue';
 import textContent from '../constants/textContent';
-import { ref } from 'vue';
+import { useOptionCardStore } from '../stores/OptionCardStore';
 
 
-const boxClicked = ref(0);
+const store = useOptionCardStore();
 
 const handleClick = (elementId: number): void => {
-    boxClicked.value = elementId;
-    console.log('boxClicked tiene de valor', boxClicked.value);
+    store.setBoxClicked(elementId);
 };
+
 
 </script>
 
 <style scoped lang="scss">
 .tab1-container {
-    background-color: #ffffff;
 
     .tab1-container__header {
         text-align: center;
+        padding: 0.3rem 0 2rem 0;
+        
     }
 
     .tab1-container__title__rating svg {
@@ -62,20 +62,22 @@ const handleClick = (elementId: number): void => {
 
     .card-list-container {
         display: grid;
-        //grid-template-columns: repeat(3, 1fr);
-        grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 0.4rem;
-        margin: 0 2rem;
+        
 
-        .card-list-container__card-container {
-           // grid-column: span 3;
-        }
     }
 
 }
 
 .property-list {
     padding-left: 1rem;
+}
+
+.label-clickable-div{
+    font: $option-card-title-font;
+    padding: 0.8rem 1rem;
+
 }
 
 @media (min-width: 33rem) {

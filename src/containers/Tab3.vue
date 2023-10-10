@@ -20,23 +20,23 @@ import BeerList from './../components/BeerList.vue';
         color: $light-blue;
         font: $blue-title-font;
         text-align: center;
-        padding: 1rem;
-        margin-left: 2rem;
+        padding: 2rem 0 4rem 0;
     }
 }
 
 .beer-list-container {
     background-color: #ffffff;
     color: $light-blue;
-    border: 1px dotted $grey;
-    margin-top: 3rem;
-    padding: 0 1rem;
+    border: 1px solid $border-grey;
+    padding-left: 1.5rem;
+    width: 100%;
 
 
    
         .beer-list-container__title {
             text-align: center;
-           padding: 1rem 1rem 1rem 0;
+           padding: 3rem 1rem 1rem 0;
+         
  
             font: $blue-title-font;
         }
@@ -49,6 +49,7 @@ import BeerList from './../components/BeerList.vue';
     .tab-header__title{
         text-align: left;
         margin: 0;
+        margin-left: 1.36rem;
     }
   }
   

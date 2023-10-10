@@ -44,10 +44,6 @@ const tryArray = ()=>console.log(starArray.value);
     }
     }
 
-
-
-
-
     @media (min-width: 32rem) {
     .title--rating {
         margin-left: 2rem;

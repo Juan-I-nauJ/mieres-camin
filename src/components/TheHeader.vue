@@ -20,12 +20,14 @@
     top: 0;
     left: 0;
     right: 0;
+    max-width: 80rem;
     border: 1px solid $background;
     border-top: none;
     font: $tab-title-font;
     color: $light-blue;
     background-color: #ffffff;
     height: 3.18rem;
+    box-shadow: 0.1px 0.6px 0.6px 0.7px rgba(78, 81, 86, 0.1);
 
     .nav {
         width: 100%;
