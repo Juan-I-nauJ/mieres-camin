@@ -1,17 +1,16 @@
+@use "sass:map";
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
-$light-blue: #4BA7EE;
-$mid-blue: #003970;
-$dark-blue: #001841;
-$grey: #4E5156;
-$black: #000000;
-$red: #DB171D;
-$orange: #FFAB48;
-$yellow: #FFEF63;
-$background: #FAFAFA;
-$border-grey: #E5E5E5;
+
+$colors: ("light-blue":#4BA7EE, "mid-blue": #003970, "dark-blue": #001841, "grey":#4E5156, "black":#000000, "red":#DB171D,
+"orange":#FFAB48, "yellow":#FFEF63, "background":#FAFAFA, "border-grey":#E5E5E5, "white":#FFFFFF);
+//$fonts: ("title-font":bold 24px/30px "Roboto Slab", "subtitle-font": bold 18/24px "Roboto Slab", "blue-title-font": bold 24px/38px "Roboto Slab",
+//"tab-title-font": 16px/14px "Roboto Slab", "option-card-title-font": 16px/16px "Roboto", "option-card-regular-font": 15px/25px "Roboto",
+//"beer-card-dishes-font": bold 14px/19px "Roboto Bold", "main-font": 14px/20px "Roboto", "spaced-font": 12px/14px "Roboto");
 $title-font: bold 24px/30px "Roboto Slab";
 $subtitle-font: bold 18px/24px "Roboto Slab";
 $blue-title-font: bold 24px/38px "Roboto Slab";

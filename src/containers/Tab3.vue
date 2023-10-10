@@ -15,9 +15,10 @@ import BeerList from './../components/BeerList.vue';
 </script>
 
 <style scoped lang="scss">
+@use "sass:map";
 .tab-header {
     .tab-header__title {
-        color: $light-blue;
+        color: map.get($colors, "light-blue");
         font: $blue-title-font;
         text-align: center;
         padding: 2rem 0 4rem 0;
@@ -25,9 +26,9 @@ import BeerList from './../components/BeerList.vue';
 }
 
 .beer-list-container {
-    background-color: #ffffff;
-    color: $light-blue;
-    border: 1px solid $border-grey;
+    background-color: map.get($colors, "white");
+    color: map.get($colors, "light-blue");
+    border: 1px solid map.get($colors, "border-grey");
     padding-left: 1.5rem;
     width: 100%;
 

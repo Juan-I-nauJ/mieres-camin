@@ -10,6 +10,8 @@ import TheHeader from './components/TheHeader.vue';
 </template>
 
 <style lang="scss">
+@use "sass:map";
+
 *{
   font: $main-font;
   box-sizing: border-box;
@@ -20,7 +22,7 @@ html{
   margin: 0 auto;
 }
 body{
-  background-color: $background;
+  background-color: map.get($colors, "background");
 }
 
 .page-view{

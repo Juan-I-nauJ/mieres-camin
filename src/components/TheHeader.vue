@@ -15,17 +15,18 @@
 </script>
 
 <style scoped lang="scss">
+@use "sass:map";
 .header {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     max-width: 80rem;
-    border: 1px solid $background;
+    border: 1px solid map.get($colors, "background");
     border-top: none;
     font: $tab-title-font;
-    color: $light-blue;
-    background-color: #ffffff;
+    color: map.get($colors, "light-blue");
+    background-color: map.get($colors, "white");
     height: 3.18rem;
     box-shadow: 0.1px 0.6px 0.6px 0.7px rgba(78, 81, 86, 0.1);
 
@@ -45,14 +46,14 @@
             .nav__li {
                 .nav__li--a {
                     text-decoration: none;
-                    padding: 0 0 1rem 0;
-                    color: $light-blue;
+                    padding: 0 0 0.9rem 0;
+                    color: map.get($colors, "light-blue");
 
                 }
 
                 .router-link-exact-active {
-                    border-bottom: 1px solid $black;
-                    color: $mid-blue;
+                    border-bottom: 1px solid map.get($colors, "black");
+                    color: map.get($colors, "mid-blue");
                 }
             }
 
@@ -78,7 +79,7 @@
                     margin-left: 2rem;
 
                     .nav__li--a {
-                        padding: 0 2rem 1rem 2rem;
+                        padding: 0 2rem 0.9rem 2rem;
 
                     }
                 }

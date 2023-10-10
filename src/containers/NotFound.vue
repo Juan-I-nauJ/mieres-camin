@@ -13,7 +13,7 @@
 
 <style scoped lang="scss">
 .not-found{
-    background-color: #ffffff;
+    background-color: map.get($colors, "white");
 }
 .not-found__header__title{
     font-family: $title-font;

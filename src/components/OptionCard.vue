@@ -34,26 +34,25 @@ const handleSelectedProp = computed(():boolean=> store.getBoxClicked === props.b
 
 const handleRadioClick = ():void=>{store.setBoxClicked(props.boxId || 0)};
 
-
-
-
 </script>
 
 <style scoped lang="scss">
+@use "sass:map";
 .card {
     min-height: 80vh;
-    border: 1px solid black;
+    border: 1px solid map.get($colors, "light-blue");
     display: flex;
     flex-direction: column;
-    background-color: #FFFFFF;
+    background-color: map.get($colors, "white");
 }
 
 .card-header {
     text-align: center;
     font: $option-card-title-font;
-    color: $mid-blue;
+    color: lighten(map.get($colors, "mid-blue"), 10%);
     padding-top: 1rem; 
     font-weight: bold;
+    
 }
 
 hr {
@@ -86,8 +85,8 @@ hr {
     margin: 0.5rem 0.5rem 1rem 0.8rem;
     align-items: center;
     justify-content: center;
-    border: 1px solid $background;
-    background-color: $background;
+    border: 1px solid map.get($colors, "background");
+    background-color: map.get($colors, "background");
 
 
     .radio-label__radio {
@@ -97,6 +96,6 @@ hr {
     }
 }
 .selected{
-    border: 1px solid $light-blue;
+    border: 1px solid lighten(map.get($colors, "mid-blue"), 10%);
 }
 </style>

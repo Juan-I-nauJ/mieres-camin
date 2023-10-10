@@ -5,9 +5,10 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {createPinia} from 'pinia';
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faStar);
-
+library.add(faChevronDown);
 
 const pinia = createPinia();
 

@@ -18,9 +18,10 @@ const tryArray = ()=>console.log(starArray.value);
 </script>
 
 <style scoped lang="scss">
+@use "sass:map";
 .title--span{
     font: $title-font;
-        color: $mid-blue;
+        color: map.get($colors, "mid-blue");
         font-style: normal;
         font-weight:lighter;
         text-align: center;
@@ -29,13 +30,13 @@ const tryArray = ()=>console.log(starArray.value);
 .title{
     text-align: center;
     font: $title-font;
-    color: $dark-blue;
+    color: map.get($colors, "dark-blue");
     display: inline-block;
    
    
 }
 .title--rating {
-        color: $orange;
+        color: map.get($colors, "orange");
         text-wrap: nowrap;
 
 

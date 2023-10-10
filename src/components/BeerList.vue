@@ -7,7 +7,7 @@
             <div class="beer-li__beer-data">
                 <p class="beer-li__beer-data--title">{{ beer.name }}</p>
                 <p class="beer-li__beer-data--p">{{ beer.description }}</p>
-                <p><span class="beer-li__dishes" v-for="dish in handleDishes(beer.food_pairing)">{{ `${dish} ` }}</span></p>
+                <p><span class="beer-li__dishes">Ideal para combinar con: </span><span class="beer-li__dishes" v-for="dish in handleDishes(beer.food_pairing)">{{ `${dish} ` }}</span></p>
             </div>
             <span class="beer-li__graduation" :class="getGraduation(beer.abv)">{{ beer.abv }}</span>
         </li>
@@ -41,6 +41,8 @@ onMounted((): void => {
 </script>
 
 <style scoped lang="scss">
+@use "sass:map";
+
 .beer-ul {
     padding: 0;
 }
@@ -50,7 +52,7 @@ onMounted((): void => {
     display: flex;
     flex-direction: column;
     margin: 2rem 0;
-    border: 1px solid $border-grey;
+    border: 1px solid map.get($colors, "border-grey");
     width: 100%;
 
 
@@ -72,17 +74,17 @@ onMounted((): void => {
     .beer-li__beer-data {
         display: flex;
         flex-direction: column;
-        color: $black;
+        color: map.get($colors, "black");
         padding-right: 2rem;
         padding-left: 1rem;
 
         .beer-li__beer-data--title {
             font: $subtitle-font;
-            color: $dark-blue;
+            color: map.get($colors, "dark-blue");
         }
 
         .beer-li__dishes {
-            color: $light-blue;
+            color: map.get($colors, "light-blue");
             font: $beer-card-dishes-font;
 
         }
@@ -101,18 +103,18 @@ onMounted((): void => {
 }
 
 .beer-li__graduation--high-alcohol {
-    background-color: $red;
-    color: #ffffff;
+    background-color: map.get($colors, "red");
+    color: map.get($colors, "white");
 }
 
 .beer-li__graduation--mid-alcohol {
-    background-color: $orange;
-    color: $black;
+    background-color: map.get($colors, "orange");
+    color: map.get($colors, "black");
 }
 
 .beer-li__graduation--low-alcohol {
-    background-color: yellow;
-    color: $black;
+    background-color: map.get($colors, "yellow");
+    color: map.get($colors, "black");
 }
 
 @media (min-width: 47rem) {
