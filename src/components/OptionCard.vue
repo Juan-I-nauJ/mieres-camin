@@ -40,7 +40,7 @@ const handleRadioClick = ():void=>{store.setBoxClicked(props.boxId || 0)};
 @use "sass:map";
 .card {
     min-height: 80vh;
-    border: 1px solid map.get($colors, "light-blue");
+    border: 0.6px solid map.get($colors, "light-blue");
     display: flex;
     flex-direction: column;
     background-color: map.get($colors, "white");
@@ -50,7 +50,7 @@ const handleRadioClick = ():void=>{store.setBoxClicked(props.boxId || 0)};
     text-align: center;
     font: $option-card-title-font;
     color: lighten(map.get($colors, "mid-blue"), 10%);
-    padding-top: 1rem; 
+    padding-top: 2rem; 
     font-weight: bold;
     
 }
@@ -86,22 +86,22 @@ hr {
     margin: 0.5rem 0.5rem 1rem 0.8rem;
     align-items: center;
     justify-content: center;
-    border: 1px solid map.get($colors, "background");
+    border: 0.5px solid map.get($colors, "background");
     background-color: map.get($colors, "background");
 
 
     .radio-label__radio {
         padding: 0;
         margin: 0 1rem;
-        
-        
 
     }
     .radio-label__radio:checked{
         accent-color: green;
+ 
     }
+
 }
 .selected{
-    border: 1px solid lighten(map.get($colors, "mid-blue"), 10%);
+    border: 0.5px solid lighten(map.get($colors, "mid-blue"), 10%);
 }
 </style>

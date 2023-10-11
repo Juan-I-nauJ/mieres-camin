@@ -63,7 +63,7 @@ const handleClick = (elementId: number): void => {
     .card-list-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 0.4rem;
+        gap: 0.6rem;
         
 
     }

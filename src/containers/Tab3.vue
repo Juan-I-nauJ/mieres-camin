@@ -28,7 +28,7 @@ import BeerList from './../components/BeerList.vue';
     background-color: map.get($colors, "white");
     color: map.get($colors, "light-blue");
     border: 1px solid map.get($colors, "border-grey");
-    padding-left: 1.5rem;
+    padding: 0 1.5rem;
     width: 100%;
 
 
