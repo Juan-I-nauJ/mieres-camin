@@ -5,8 +5,10 @@
                 <img class="beer-li__image-control__image" :src="beer.image_url" />
             </div>
             <div class="beer-li__beer-data">
+                <div class="beer-data__container">
                 <p class="beer-li__beer-data--title">{{ beer.name }}</p>
                 <p class="beer-li__beer-data--p">{{ beer.description }}</p>
+                </div>
                 <p><span class="beer-li__dishes">Ideal para combinar con: </span><span class="beer-li__dishes" v-for="dish in handleDishes(beer.food_pairing)">{{ `${dish} ` }}</span></p>
             </div>
             <span class="beer-li__graduation" :class="getGraduation(beer.abv)">{{ beer.abv }}</span>
@@ -74,6 +76,7 @@ onMounted((): void => {
     .beer-li__beer-data {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         color: map.get($colors, "black");
         padding-right: 2rem;
         padding-left: 1rem;
@@ -86,6 +89,7 @@ onMounted((): void => {
         .beer-li__dishes {
             color: map.get($colors, "light-blue");
             font: $beer-card-dishes-font;
+            padding-bottom: 0.5rem;
 
         }
 
@@ -95,7 +99,7 @@ onMounted((): void => {
         position: absolute;
         top: 1.1rem;
         right: 0;
-        padding: 0.3rem 3rem 0.3rem 0.5rem;
+        padding: 0.3rem 3.5rem 0.3rem 0.5rem;
         
         font: $subtitle-font;
    
