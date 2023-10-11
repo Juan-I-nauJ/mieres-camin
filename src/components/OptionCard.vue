@@ -60,6 +60,7 @@ hr {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
     text-align: center;
+    border: 0.01px solid lighten(map.get($colors, "light-blue"), 25%);
     
 }
 
@@ -92,7 +93,12 @@ hr {
     .radio-label__radio {
         padding: 0;
         margin: 0 1rem;
+        
+        
 
+    }
+    .radio-label__radio:checked{
+        accent-color: green;
     }
 }
 .selected{

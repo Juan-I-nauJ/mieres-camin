@@ -21,3 +21,13 @@ $beer-card-dishes-font: bold 14px/19px "Roboto Bold";
 $main-font: 14px/20px "Roboto";
 $spaced-font: 12px/14px "Roboto";
 $spaces-for-font: 1.52px;
+
+@mixin blue-title{
+font: $blue-title-font;
+color: map.get($colors, "light-blue");
+}
+
+@mixin space-font{
+font: $spaced-font;
+letter-spacing: $spaces-for-font;
+}

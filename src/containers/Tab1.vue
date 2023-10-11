@@ -9,7 +9,7 @@
             </Tab1Title>
         </header>
         <main class="card-list-container">
-            <div class="card-list-container__card-container" v-for="(regime) in textContent.hotelCardContent"
+            <div class="card-list-container__card-container" v-for="(regime) in textContent.optionCardContent"
                 :key="regime.id">
                 <OptionCard :label-for="regime.header" radio-name="stay-options" :boxId="+regime.id">
                     <template #card-header>
