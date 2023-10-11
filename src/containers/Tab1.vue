@@ -53,7 +53,6 @@ const handleClick = (elementId: number): void => {
     .tab1-container__header {
         text-align: center;
         padding: 0.3rem 0 2rem 0;
-        
     }
 
     .tab1-container__title__rating svg {
@@ -64,10 +63,7 @@ const handleClick = (elementId: number): void => {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 0.6rem;
-        
-
     }
-
 }
 
 .property-list {
@@ -77,7 +73,6 @@ const handleClick = (elementId: number): void => {
 .label-clickable-div{
     font: $option-card-title-font;
     padding: 0.8rem 1rem;
-
 }
 
 </style>

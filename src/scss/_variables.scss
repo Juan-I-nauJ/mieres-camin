@@ -31,3 +31,13 @@ color: map.get($colors, "light-blue");
 font: $spaced-font;
 letter-spacing: $spaces-for-font;
 }
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}

@@ -41,8 +41,7 @@ const handleRadioClick = ():void=>{store.setBoxClicked(props.boxId || 0)};
 .card {
     min-height: 80vh;
     border: 0.6px solid map.get($colors, "light-blue");
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     background-color: map.get($colors, "white");
 }
 
@@ -60,17 +59,14 @@ hr {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
     text-align: center;
-    border: 0.01px solid lighten(map.get($colors, "light-blue"), 25%);
-    
+    border: 0.01px solid lighten(map.get($colors, "light-blue"), 25%);  
 }
 
 .card-body {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: space-between;
     flex-grow: 1;
     font: $option-card-regular-font;
-
 }
 
 .card-body__card-properties{
@@ -97,7 +93,6 @@ hr {
     }
     .radio-label__radio:checked{
         accent-color: green;
- 
     }
 
 }

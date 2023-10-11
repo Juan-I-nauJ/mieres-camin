@@ -32,14 +32,12 @@
 
     .nav {
         width: 100%;
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         justify-content: center;
 
         .nav__ul {
             padding: 0;
-            display: flex;
-            flex-direction: row;
+            @include flex-row;
             list-style: none;
             justify-content: center;
 
@@ -48,7 +46,6 @@
                     text-decoration: none;
                     padding: 0 0 0.9rem 0;
                     color: map.get($colors, "light-blue");
-
                 }
 
                 .router-link-exact-active {

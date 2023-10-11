@@ -54,8 +54,7 @@ const toggleBody = ():void => {bodyShown.value = !bodyShown.value};
     overflow:hidden;
 }
 .cards-container{
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
 }
 
 .card-container{
@@ -70,7 +69,6 @@ const toggleBody = ():void => {bodyShown.value = !bodyShown.value};
 
 .header-toggle-arrow__icon{
     transition: transform 0.3s;
-
 }
 
 .rotateArrow{

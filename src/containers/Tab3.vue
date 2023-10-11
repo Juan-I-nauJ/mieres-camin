@@ -31,8 +31,6 @@ import BeerList from './../components/BeerList.vue';
     padding: 0 1.5rem;
     width: 100%;
 
-
-   
         .beer-list-container__title {
             text-align: center;
            padding: 3rem 1rem 1rem 0;
@@ -56,9 +54,7 @@ import BeerList from './../components/BeerList.vue';
   .beer-list-container__title{
     text-align: left;
     margin: 0;
-    
   }
-
   }
 }
 </style>

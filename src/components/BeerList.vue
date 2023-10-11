@@ -51,16 +51,14 @@ onMounted((): void => {
 
 .beer-li {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     margin: 2rem 0;
     border: 1px solid map.get($colors, "border-grey");
     width: 100%;
 
 
     .beer-li__image-control {
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         justify-content: center;
         align-items: center;
         height: 20%;
@@ -74,8 +72,7 @@ onMounted((): void => {
     }
 
     .beer-li__beer-data {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         justify-content: space-between;
         color: map.get($colors, "black");
         padding-right: 2rem;
@@ -90,9 +87,7 @@ onMounted((): void => {
             color: map.get($colors, "light-blue");
             font: $beer-card-dishes-font;
             padding-bottom: 0.5rem;
-
         }
-
     }
 
     .beer-li__graduation {
@@ -100,9 +95,7 @@ onMounted((): void => {
         top: 1.1rem;
         right: 0;
         padding: 0.3rem 3.5rem 0.3rem 0.5rem;
-        
         font: $subtitle-font;
-   
     }
 }
 
